@@ -1380,7 +1380,12 @@ function onExamSelected() {
     return;
   }
 
-  grid.innerHTML = years.map(y => `
+  grid.innerHTML = `
+    <button class="year-btn" id="year-btn-__all__" onclick="selectYear('__all__')">
+      All
+      <span class="year-count">${rows.length} Qs</span>
+    </button>
+  ` + years.map(y => `
     <button class="year-btn" id="year-btn-${y}" onclick="selectYear('${y}')">
       ${y}
       <span class="year-count">${yearMap[y]} Qs</span>
