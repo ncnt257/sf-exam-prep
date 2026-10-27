@@ -146,6 +146,7 @@
         <div class="mode-badge" id="mode-badge">Practice</div>
       </div>
       <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <button class="share-btn" onclick="openShare()" title="Continue this attempt on another device">📱 Continue on phone</button>
         <div class="progress-row">
           <span id="progress-text">0 / 0</span>
           <div class="progress-bar-wrap">
@@ -193,6 +194,22 @@
 
 </div><!-- /container -->
 
+<!-- ══════════ CONTINUE ON ANOTHER DEVICE ══════════ -->
+<div class="share-overlay hidden" id="share-overlay" onclick="if (event.target === this) closeShare()">
+  <div class="share-modal">
+    <h3>📱 Continue on another device</h3>
+    <p>Scan with your phone's camera, or open this link there. Your answers and timer come with you.</p>
+    <div class="share-qr" id="share-qr"></div>
+    <div class="share-link-row">
+      <input type="text" id="share-link" readonly onclick="this.select()">
+      <button class="resume-btn" id="share-copy-btn" onclick="copyShareLink()">Copy</button>
+    </div>
+    <small class="share-note">The link is a snapshot — answers you add after creating it aren't included.</small>
+    <button class="discard-btn" onclick="closeShare()">Close</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -75,6 +75,7 @@ let currentYear = null;
 let currentMode = 'practice';
 let currentQuestions = [];
 let currentOrder = [];  // indices into getFilteredByExamAndYear(), kept so a saved attempt can be rebuilt
+let currentSeed = null; // shuffle seed when randomized, so a share link can rebuild the order from one number
 let userAnswers = {};
 let timerInterval = null;
 let timerSeconds = 0;
@@ -97,6 +98,7 @@ window.onload = () => {
       const content = document.getElementById('content-ready');
       content.classList.remove('hidden');
       content.style.animation = 'fadeUp .35s ease';
+      importSharedProgress();
     })
     .catch(err => {
       document.getElementById('loading-state').innerHTML =
@@ -346,11 +348,26 @@ function selectMode(mode) {
 function startExam() {
   if (!currentExam || !currentYear) return;
 
-  let order = [...getFilteredByExamAndYear().keys()];
-  if (document.getElementById('randomize-cb').checked) {
-    order = order.sort(() => Math.random() - 0.5);
+  currentSeed = document.getElementById('randomize-cb').checked ? (Math.random() * 2 ** 32) >>> 0 : null;
+  beginExam(buildOrder(getFilteredByExamAndYear().length, currentSeed), {}, 0);
+}
+
+// Question order 0..total-1, Fisher–Yates shuffled by a seeded PRNG (mulberry32) when seed is set.
+function buildOrder(total, seed) {
+  const order = [...Array(total).keys()];
+  if (seed == null) return order;
+  let s = seed >>> 0;
+  const rand = () => {
+    s = (s + 0x6D2B79F5) >>> 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  for (let i = total - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
   }
-  beginExam(order, {}, 0);
+  return order;
 }
 
 // Shared by a fresh start and a resumed attempt.
@@ -425,6 +442,7 @@ function saveProgress() {
       year: currentYear,
       mode: currentMode,
       total: getFilteredByExamAndYear().length,
+      seed: currentSeed,
       order: currentOrder,
       answers: userAnswers,
       seconds: timerSeconds,
@@ -458,8 +476,7 @@ function showResumeBanner() {
   banner.classList.remove('hidden');
 }
 
-async function resumeProgress() {
-  const saved = loadProgress();
+async function resumeProgress(saved = loadProgress()) {
   if (!saved) return showResumeBanner();
 
   await onDropdownSelect('exam', saved.exam);
@@ -473,12 +490,134 @@ async function resumeProgress() {
     discardProgress();
     return;
   }
-  beginExam(saved.order, saved.answers || {}, saved.seconds || 0);
+  currentSeed = saved.seed ?? null;
+  beginExam(saved.order || buildOrder(saved.total, currentSeed), saved.answers || {}, saved.seconds || 0);
 }
 
 function discardProgress() {
   clearProgress();
   showResumeBanner();
+}
+
+// ─── Continue on another device (share link + QR) ─────────────────────────────
+// The whole attempt travels in the URL hash (#resume=…), so no server is needed.
+// Payload: e=CSV file, y=year, m=p|e, t=total, s=seconds, r=seed, o=order (only
+// for attempts saved before seeds existed), a=choice labels per question joined by
+// '.', x={index: open-ended text}. Deflated when the browser supports it.
+const SHARE_PARAM = 'resume=';
+
+function bytesToBase64Url(bytes) {
+  let bin = '';
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+function base64UrlToBytes(str) {
+  const bin = atob(str.replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from(bin, c => c.charCodeAt(0));
+}
+
+async function pipeThrough(bytes, stream) {
+  return new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(stream)).arrayBuffer());
+}
+
+async function encodeShare(payload) {
+  const bytes = new TextEncoder().encode(JSON.stringify(payload));
+  if (typeof CompressionStream === 'undefined') return 'j' + bytesToBase64Url(bytes);
+  return 'z' + bytesToBase64Url(await pipeThrough(bytes, new CompressionStream('deflate-raw')));
+}
+
+async function decodeShare(code) {
+  let bytes = base64UrlToBytes(code.slice(1));
+  if (code[0] === 'z') bytes = await pipeThrough(bytes, new DecompressionStream('deflate-raw'));
+  return JSON.parse(new TextDecoder().decode(bytes));
+}
+
+function buildSharePayload() {
+  const total = getFilteredByExamAndYear().length;
+  const choices = [], open = {};
+  currentQuestions.forEach((q, idx) => {
+    const ans = userAnswers[idx] || [];
+    if (getQType(q) === 'open') { choices.push(''); if (ans[0]) open[idx] = ans[0]; }
+    else choices.push(ans.join(''));
+  });
+  const payload = {
+    e: examFiles[currentExam],
+    y: currentYear,
+    m: currentMode === 'exam' ? 'e' : 'p',
+    t: total,
+    s: timerSeconds,
+    a: choices.join('.').replace(/\.+$/, ''),
+  };
+  if (currentSeed != null) payload.r = currentSeed;
+  else if (currentOrder.some((v, i) => v !== i)) payload.o = currentOrder;
+  if (Object.keys(open).length) payload.x = open;
+  return payload;
+}
+
+// Turns a decoded payload back into the same shape saveProgress() writes.
+function payloadToProgress(p) {
+  const exam = Object.keys(examFiles).find(title => examFiles[title] === p.e);
+  if (!exam) return null;
+  const seed = p.r ?? null;
+  const order = p.o || buildOrder(p.t, seed);
+  const choices = (p.a || '').split('.');
+  const answers = {};
+  order.forEach((_, idx) => {
+    if (p.x && p.x[idx] != null) answers[idx] = [p.x[idx]];
+    else if (choices[idx]) answers[idx] = choices[idx].split('');
+  });
+  return {
+    exam, year: p.y, mode: p.m === 'e' ? 'exam' : 'practice',
+    total: p.t, seed, order, answers, seconds: p.s || 0, savedAt: Date.now(),
+  };
+}
+
+async function openShare() {
+  if (examSubmitted) return;
+  const url = location.origin + location.pathname + '#' + SHARE_PARAM + await encodeShare(buildSharePayload());
+  document.getElementById('share-link').value = url;
+  document.getElementById('share-copy-btn').textContent = 'Copy';
+
+  const qrBox = document.getElementById('share-qr');
+  if (typeof qrcode === 'undefined') {
+    qrBox.innerHTML = '<small class="share-note">QR code unavailable offline — copy the link instead.</small>';
+  } else {
+    const qr = qrcode(0, 'L');
+    qr.addData(url);
+    qr.make();
+    qrBox.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+  }
+  document.getElementById('share-overlay').classList.remove('hidden');
+}
+
+function closeShare() {
+  document.getElementById('share-overlay').classList.add('hidden');
+}
+
+async function copyShareLink() {
+  const input = document.getElementById('share-link');
+  try { await navigator.clipboard.writeText(input.value); }
+  catch (e) { input.select(); document.execCommand('copy'); }
+  document.getElementById('share-copy-btn').textContent = 'Copied ✓';
+}
+
+// Opened from a share link: store the attempt locally, clean the URL, and jump straight in.
+async function importSharedProgress() {
+  const hash = location.hash.slice(1);
+  if (!hash.startsWith(SHARE_PARAM)) return;
+  history.replaceState(null, '', location.pathname + location.search);
+
+  let progress;
+  try { progress = payloadToProgress(await decodeShare(hash.slice(SHARE_PARAM.length))); }
+  catch (e) { progress = null; }
+  if (!progress) { alert('This continue link is invalid or the exam no longer exists.'); return; }
+
+  if (loadProgress() && !confirm('You already have an unfinished attempt on this device. Replace it with the one from the link?')) return;
+  try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress)); }
+  catch (e) { /* storage blocked — still resume from memory below */ }
+  showResumeBanner();
+  resumeProgress(progress);
 }
 
 function formatTime(s) {

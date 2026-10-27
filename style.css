@@ -944,6 +944,57 @@ body {
 .discard-btn { background: transparent; color: var(--sf-gray-500); border: 2px solid var(--sf-gray-300); }
 .discard-btn:hover { color: var(--sf-red); border-color: var(--sf-red); }
 
+/* ─── Continue on another device ─── */
+.share-btn {
+  padding: 8px 14px;
+  background: white;
+  border: 2px solid var(--sf-gray-200);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--sf-blue);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.share-btn:hover { border-color: var(--sf-blue); }
+.share-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(3,45,96,0.45);
+}
+.share-modal {
+  width: 100%;
+  max-width: 400px;
+  padding: 28px 24px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  text-align: center;
+  animation: fadeUp .25s ease;
+}
+.share-modal h3 { color: var(--sf-navy); font-weight: 900; margin-bottom: 6px; }
+.share-modal p { font-size: 0.9rem; color: var(--sf-gray-500); margin-bottom: 16px; }
+.share-qr { display: flex; justify-content: center; min-height: 40px; margin-bottom: 16px; }
+.share-qr svg { width: 100%; max-width: 240px; height: auto; }
+.share-link-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.share-link-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 2px solid var(--sf-gray-200);
+  border-radius: var(--radius-sm);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--sf-gray-700);
+}
+.share-note { display: block; font-size: 0.78rem; color: var(--sf-gray-500); margin-bottom: 16px; }
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
