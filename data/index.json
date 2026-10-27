@@ -1,0 +1,1067 @@
+[
+ {
+  "title": "Actual exam question for Salesforce's 201-Commercial-Banking-Functional exam",
+  "file": "201-Commercial-Banking-Functional.csv",
+  "count": 39
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADM-201 exam",
+  "file": "ADM-201.csv",
+  "count": 243
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADM-211 exam",
+  "file": "ADM-211.csv",
+  "count": 8
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADM-251 exam",
+  "file": "ADM-251.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADM-261 exam",
+  "file": "ADM-261.csv",
+  "count": 19
+ },
+ {
+  "title": "Actual exam question for Salesforce's Advanced-Administrator exam",
+  "file": "Advanced-Administrator.csv",
+  "count": 102
+ },
+ {
+  "title": "Actual exam question for Salesforce's Advanced-Cross-Channel exam",
+  "file": "Advanced-Cross-Channel.csv",
+  "count": 6
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADX-201 exam",
+  "file": "ADX-201.csv",
+  "count": 31
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADX-201C exam",
+  "file": "ADX-201C.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADX-201E exam",
+  "file": "ADX-201E.csv",
+  "count": 25
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADX-211 exam",
+  "file": "ADX-211.csv",
+  "count": 10
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADX-271 exam",
+  "file": "ADX-271.csv",
+  "count": 5
+ },
+ {
+  "title": "Actual exam question for Salesforce's ADX261 exam",
+  "file": "ADX261.csv",
+  "count": 49
+ },
+ {
+  "title": "Actual exam question for Salesforce's Agentforce-Specialist exam",
+  "file": "Agentforce-Specialist.csv",
+  "count": 256
+ },
+ {
+  "title": "Actual exam question for Salesforce's AI-201 exam",
+  "file": "AI-201.csv",
+  "count": 69
+ },
+ {
+  "title": "Actual exam question for Salesforce's Analytics-Admn-201 exam",
+  "file": "Analytics-Admn-201.csv",
+  "count": 23
+ },
+ {
+  "title": "Actual exam question for Salesforce's Analytics-Arch-201 exam",
+  "file": "Analytics-Arch-201.csv",
+  "count": 4
+ },
+ {
+  "title": "Actual exam question for Salesforce's Analytics-Con-201 exam",
+  "file": "Analytics-Con-201.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's Analytics-Con-301 exam",
+  "file": "Analytics-Con-301.csv",
+  "count": 13
+ },
+ {
+  "title": "Actual exam question for Salesforce's Analytics-DA-201 exam",
+  "file": "Analytics-DA-201.csv",
+  "count": 20
+ },
+ {
+  "title": "Actual exam question for Salesforce's ANC-101 exam",
+  "file": "ANC-101.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's ANC-201 exam",
+  "file": "ANC-201.csv",
+  "count": 25
+ },
+ {
+  "title": "Actual exam question for Salesforce's ANC-301 exam",
+  "file": "ANC-301.csv",
+  "count": 24
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-201 exam",
+  "file": "AP-201.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-203 exam",
+  "file": "AP-203.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-204 exam",
+  "file": "AP-204.csv",
+  "count": 8
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-205 exam",
+  "file": "AP-205.csv",
+  "count": 14
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-208 exam",
+  "file": "AP-208.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-209 exam",
+  "file": "AP-209.csv",
+  "count": 14
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-211 exam",
+  "file": "AP-211.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-212 exam",
+  "file": "AP-212.csv",
+  "count": 4
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-213 exam",
+  "file": "AP-213.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-216 exam",
+  "file": "AP-216.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-218 exam",
+  "file": "AP-218.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-219 exam",
+  "file": "AP-219.csv",
+  "count": 4
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-220 exam",
+  "file": "AP-220.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-221 exam",
+  "file": "AP-221.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-223 exam",
+  "file": "AP-223.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's AP-226 exam",
+  "file": "AP-226.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's ARC-101 exam",
+  "file": "ARC-101.csv",
+  "count": 13
+ },
+ {
+  "title": "Actual exam question for Salesforce's ARC-300 exam",
+  "file": "ARC-300.csv",
+  "count": 15
+ },
+ {
+  "title": "Actual exam question for Salesforce's ARC-801 exam",
+  "file": "ARC-801.csv",
+  "count": 6
+ },
+ {
+  "title": "Actual exam question for Salesforce's Arch-303 exam",
+  "file": "Arch-303.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's B2B-Commerce-Administrator exam",
+  "file": "B2B-Commerce-Administrator.csv",
+  "count": 44
+ },
+ {
+  "title": "Actual exam question for Salesforce's B2B-Commerce-Developer exam",
+  "file": "B2B-Commerce-Developer.csv",
+  "count": 88
+ },
+ {
+  "title": "Actual exam question for Salesforce's B2B-Solution-Architect exam",
+  "file": "B2B-Solution-Architect.csv",
+  "count": 24
+ },
+ {
+  "title": "Actual exam question for Salesforce's B2C-Commerce-Architect exam",
+  "file": "B2C-Commerce-Architect.csv",
+  "count": 24
+ },
+ {
+  "title": "Actual exam question for Salesforce's B2C-Commerce-Developer-JPN exam",
+  "file": "B2C-Commerce-Developer-JPN.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's B2C-Commerce-Developer exam",
+  "file": "B2C-Commerce-Developer.csv",
+  "count": 39
+ },
+ {
+  "title": "Actual exam question for Salesforce's B2C-Solution-Architect exam",
+  "file": "B2C-Solution-Architect.csv",
+  "count": 30
+ },
+ {
+  "title": "Actual exam question for Salesforce's BA-201 exam",
+  "file": "BA-201.csv",
+  "count": 5
+ },
+ {
+  "title": "Actual exam question for Salesforce's CCD-102 exam",
+  "file": "CCD-102.csv",
+  "count": 8
+ },
+ {
+  "title": "Actual exam question for Salesforce's CCM-101 exam",
+  "file": "CCM-101.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's Certified-Business-Analyst exam",
+  "file": "Certified-Business-Analyst.csv",
+  "count": 189
+ },
+ {
+  "title": "Actual exam question for Salesforce's Certified-Strategy-Designer exam",
+  "file": "Certified-Strategy-Designer.csv",
+  "count": 53
+ },
+ {
+  "title": "Actual exam question for Salesforce's Comm-Dev-101 exam",
+  "file": "Comm-Dev-101.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's Community-Cloud-Consultant exam",
+  "file": "Community-Cloud-Consultant.csv",
+  "count": 5
+ },
+ {
+  "title": "Actual exam question for Salesforce's Consumer-Goods-Cloud-Accredited-Professional exam",
+  "file": "Consumer-Goods-Cloud-Accredited-Professional.csv",
+  "count": 36
+ },
+ {
+  "title": "Actual exam question for Salesforce's Consumer-Goods-Cloud exam",
+  "file": "Consumer-Goods-Cloud.csv",
+  "count": 36
+ },
+ {
+  "title": "Actual exam question for Salesforce's CPQ-201 exam",
+  "file": "CPQ-201.csv",
+  "count": 34
+ },
+ {
+  "title": "Actual exam question for Salesforce's CPQ-211 exam",
+  "file": "CPQ-211.csv",
+  "count": 18
+ },
+ {
+  "title": "Actual exam question for Salesforce's CPQ-301 exam",
+  "file": "CPQ-301.csv",
+  "count": 18
+ },
+ {
+  "title": "Actual exam question for Salesforce's CPQ-Specialist exam",
+  "file": "CPQ-Specialist.csv",
+  "count": 74
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRM-Analytics-and-Einstein-Discovery-Consultant exam",
+  "file": "CRM-Analytics-and-Einstein-Discovery-Consultant.csv",
+  "count": 55
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-101 exam",
+  "file": "CRT-101.csv",
+  "count": 81
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-160 exam",
+  "file": "CRT-160.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-211 exam",
+  "file": "CRT-211.csv",
+  "count": 40
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-250 exam",
+  "file": "CRT-250.csv",
+  "count": 11
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-251 exam",
+  "file": "CRT-251.csv",
+  "count": 117
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-261 exam",
+  "file": "CRT-261.csv",
+  "count": 62
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-271 exam",
+  "file": "CRT-271.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-402 exam",
+  "file": "CRT-402.csv",
+  "count": 30
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-403 exam",
+  "file": "CRT-403.csv",
+  "count": 59
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-450 exam",
+  "file": "CRT-450.csv",
+  "count": 153
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-550 exam",
+  "file": "CRT-550.csv",
+  "count": 37
+ },
+ {
+  "title": "Actual exam question for Salesforce's CRT-600 exam",
+  "file": "CRT-600.csv",
+  "count": 33
+ },
+ {
+  "title": "Actual exam question for Salesforce's Customer-Data-Platform exam",
+  "file": "Customer-Data-Platform.csv",
+  "count": 36
+ },
+ {
+  "title": "Actual exam question for Salesforce's Data-Architect exam",
+  "file": "Data-Architect.csv",
+  "count": 146
+ },
+ {
+  "title": "Actual exam question for Salesforce's Data-Architecture-And-Management-Designer exam",
+  "file": "Data-Architecture-And-Management-Designer.csv",
+  "count": 28
+ },
+ {
+  "title": "Actual exam question for Salesforce's Data-Cloud-Consultant exam",
+  "file": "Data-Cloud-Consultant.csv",
+  "count": 166
+ },
+ {
+  "title": "Actual exam question for Salesforce's Data-Con-101 exam",
+  "file": "Data-Con-101.csv",
+  "count": 25
+ },
+ {
+  "title": "Actual exam question for Salesforce's DEV-401 exam",
+  "file": "DEV-401.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's DEV-450 exam",
+  "file": "DEV-450.csv",
+  "count": 9
+ },
+ {
+  "title": "Actual exam question for Salesforce's DEV-501 exam",
+  "file": "DEV-501.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's Development-Lifecycle-and-Deployment-Architect exam",
+  "file": "Development-Lifecycle-and-Deployment-Architect.csv",
+  "count": 108
+ },
+ {
+  "title": "Actual exam question for Salesforce's Development-Lifecycle-and-Deployment-Designer exam",
+  "file": "Development-Lifecycle-and-Deployment-Designer.csv",
+  "count": 48
+ },
+ {
+  "title": "Actual exam question for Salesforce's DEX-403 exam",
+  "file": "DEX-403.csv",
+  "count": 10
+ },
+ {
+  "title": "Actual exam question for Salesforce's DEX-403E exam",
+  "file": "DEX-403E.csv",
+  "count": 12
+ },
+ {
+  "title": "Actual exam question for Salesforce's DEX-450 exam",
+  "file": "DEX-450.csv",
+  "count": 8
+ },
+ {
+  "title": "Actual exam question for Salesforce's Education-Cloud-Consultant exam",
+  "file": "Education-Cloud-Consultant.csv",
+  "count": 24
+ },
+ {
+  "title": "Actual exam question for Salesforce's EEB-101 exam",
+  "file": "EEB-101.csv",
+  "count": 14
+ },
+ {
+  "title": "Actual exam question for Salesforce's EEB101 exam",
+  "file": "EEB101.csv",
+  "count": 5
+ },
+ {
+  "title": "Actual exam question for Salesforce's Einstein-Analytics-and-Discovery-Consultant exam",
+  "file": "Einstein-Analytics-and-Discovery-Consultant.csv",
+  "count": 14
+ },
+ {
+  "title": "Actual exam question for Salesforce's Energy-and-Utilities-Cloud exam",
+  "file": "Energy-and-Utilities-Cloud.csv",
+  "count": 52
+ },
+ {
+  "title": "Actual exam question for Salesforce's EX-Con-101 exam",
+  "file": "EX-Con-101.csv",
+  "count": 5
+ },
+ {
+  "title": "Actual exam question for Salesforce's Experience-Cloud-Consultant exam",
+  "file": "Experience-Cloud-Consultant.csv",
+  "count": 134
+ },
+ {
+  "title": "Actual exam question for Salesforce's Field-Service-Consultant exam",
+  "file": "Field-Service-Consultant.csv",
+  "count": 78
+ },
+ {
+  "title": "Actual exam question for Salesforce's Field-Service-Lightning-Consultant exam",
+  "file": "Field-Service-Lightning-Consultant.csv",
+  "count": 25
+ },
+ {
+  "title": "Actual exam question for Salesforce's Financial-Services-Cloud exam",
+  "file": "Financial-Services-Cloud.csv",
+  "count": 215
+ },
+ {
+  "title": "Actual exam question for Salesforce's FSL-201 exam",
+  "file": "FSL-201.csv",
+  "count": 22
+ },
+ {
+  "title": "Actual exam question for Salesforce's Health-Cloud-Accredited-Professional exam",
+  "file": "Health-Cloud-Accredited-Professional.csv",
+  "count": 125
+ },
+ {
+  "title": "Actual exam question for Salesforce's Heroku-Architect exam",
+  "file": "Heroku-Architect.csv",
+  "count": 11
+ },
+ {
+  "title": "Actual exam question for Salesforce's Heroku-Architecture-Designer exam",
+  "file": "Heroku-Architecture-Designer.csv",
+  "count": 8
+ },
+ {
+  "title": "Actual exam question for Salesforce's Identity-and-Access-Management-Architect exam",
+  "file": "Identity-and-Access-Management-Architect.csv",
+  "count": 75
+ },
+ {
+  "title": "Actual exam question for Salesforce's Identity-and-Access-Management-Designer exam",
+  "file": "Identity-and-Access-Management-Designer.csv",
+  "count": 31
+ },
+ {
+  "title": "Actual exam question for Salesforce's Industries-CPQ-Developer exam",
+  "file": "Industries-CPQ-Developer.csv",
+  "count": 38
+ },
+ {
+  "title": "Actual exam question for Salesforce's Integration-Architect exam",
+  "file": "Integration-Architect.csv",
+  "count": 124
+ },
+ {
+  "title": "Actual exam question for Salesforce's Integration-Architecture-Designer exam",
+  "file": "Integration-Architecture-Designer.csv",
+  "count": 77
+ },
+ {
+  "title": "Actual exam question for Salesforce's Interaction-Studio-Accredited-Professional exam",
+  "file": "Interaction-Studio-Accredited-Professional.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's IPQ-435 exam",
+  "file": "IPQ-435.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's IPQ-499 exam",
+  "file": "IPQ-499.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's JavaScript-Developer-I exam",
+  "file": "JavaScript-Developer-I.csv",
+  "count": 165
+ },
+ {
+  "title": "Actual exam question for Salesforce's JS-Dev-101 exam",
+  "file": "JS-Dev-101.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's Manufacturing-Cloud-Professional exam",
+  "file": "Manufacturing-Cloud-Professional.csv",
+  "count": 126
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Account-Engagement-Consultant exam",
+  "file": "Marketing-Cloud-Account-Engagement-Consultant.csv",
+  "count": 35
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Account-Engagement-Specialist exam",
+  "file": "Marketing-Cloud-Account-Engagement-Specialist.csv",
+  "count": 25
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Administrator exam",
+  "file": "Marketing-Cloud-Administrator.csv",
+  "count": 103
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Advanced-Cross-Channel exam",
+  "file": "Marketing-Cloud-Advanced-Cross-Channel.csv",
+  "count": 10
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Consultant exam",
+  "file": "Marketing-Cloud-Consultant.csv",
+  "count": 136
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Developer exam",
+  "file": "Marketing-Cloud-Developer.csv",
+  "count": 145
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Email-Specialist exam",
+  "file": "Marketing-Cloud-Email-Specialist.csv",
+  "count": 163
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Intelligence exam",
+  "file": "Marketing-Cloud-Intelligence.csv",
+  "count": 34
+ },
+ {
+  "title": "Actual exam question for Salesforce's Marketing-Cloud-Personalization exam",
+  "file": "Marketing-Cloud-Personalization.csv",
+  "count": 15
+ },
+ {
+  "title": "Actual exam question for Salesforce's MC-101 exam",
+  "file": "MC-101.csv",
+  "count": 19
+ },
+ {
+  "title": "Actual exam question for Salesforce's MC-202 exam",
+  "file": "MC-202.csv",
+  "count": 11
+ },
+ {
+  "title": "Actual exam question for Salesforce's MCAE-Con-201 exam",
+  "file": "MCAE-Con-201.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's MCC-201 exam",
+  "file": "MCC-201.csv",
+  "count": 10
+ },
+ {
+  "title": "Actual exam question for Salesforce's MCE-Admn-201 exam",
+  "file": "MCE-Admn-201.csv",
+  "count": 13
+ },
+ {
+  "title": "Actual exam question for Salesforce's MCE-Con-201 exam",
+  "file": "MCE-Con-201.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's MCE-Dev-201 exam",
+  "file": "MCE-Dev-201.csv",
+  "count": 9
+ },
+ {
+  "title": "Actual exam question for Salesforce's Media-Cloud-Consultant exam",
+  "file": "Media-Cloud-Consultant.csv",
+  "count": 35
+ },
+ {
+  "title": "Actual exam question for Salesforce's MKT-101 exam",
+  "file": "MKT-101.csv",
+  "count": 43
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mobile-Solutions-Architecture-Designer exam",
+  "file": "Mobile-Solutions-Architecture-Designer.csv",
+  "count": 4
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mule-101 exam",
+  "file": "Mule-101.csv",
+  "count": 11
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mule-Arch-201 exam",
+  "file": "Mule-Arch-201.csv",
+  "count": 10
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mule-Arch-202 exam",
+  "file": "Mule-Arch-202.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mule-Con-201 exam",
+  "file": "Mule-Con-201.csv",
+  "count": 11
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mule-Dev-201 exam",
+  "file": "Mule-Dev-201.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mule-Dev-202 exam",
+  "file": "Mule-Dev-202.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's Mule-Dev-301 exam",
+  "file": "Mule-Dev-301.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's MuleSoft-Integration-Architect-I exam",
+  "file": "MuleSoft-Integration-Architect-I.csv",
+  "count": 38
+ },
+ {
+  "title": "Actual exam question for Salesforce's MuleSoft-Integration-Associate exam",
+  "file": "MuleSoft-Integration-Associate.csv",
+  "count": 40
+ },
+ {
+  "title": "Actual exam question for Salesforce's MuleSoft-Platform-Architect-I exam",
+  "file": "MuleSoft-Platform-Architect-I.csv",
+  "count": 33
+ },
+ {
+  "title": "Actual exam question for Salesforce's Nonprofit-Cloud-Consultant exam",
+  "file": "Nonprofit-Cloud-Consultant.csv",
+  "count": 46
+ },
+ {
+  "title": "Actual exam question for Salesforce's NP-Con-102 exam",
+  "file": "NP-Con-102.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's OmniStudio-Consultant exam",
+  "file": "OmniStudio-Consultant.csv",
+  "count": 144
+ },
+ {
+  "title": "Actual exam question for Salesforce's OmniStudio-Developer exam",
+  "file": "OmniStudio-Developer.csv",
+  "count": 183
+ },
+ {
+  "title": "Actual exam question for Salesforce's OMS-435 exam",
+  "file": "OMS-435.csv",
+  "count": 10
+ },
+ {
+  "title": "Actual exam question for Salesforce's Order-Management-Administrator exam",
+  "file": "Order-Management-Administrator.csv",
+  "count": 35
+ },
+ {
+  "title": "Actual exam question for Salesforce's Pardot-Consultant exam",
+  "file": "Pardot-Consultant.csv",
+  "count": 15
+ },
+ {
+  "title": "Actual exam question for Salesforce's Pardot-Specialist exam",
+  "file": "Pardot-Specialist.csv",
+  "count": 87
+ },
+ {
+  "title": "Actual exam question for Salesforce's PDI exam",
+  "file": "PDI.csv",
+  "count": 216
+ },
+ {
+  "title": "Actual exam question for Salesforce's PDII-JPN exam",
+  "file": "PDII-JPN.csv",
+  "count": 4
+ },
+ {
+  "title": "Actual exam question for Salesforce's PDII exam",
+  "file": "PDII.csv",
+  "count": 158
+ },
+ {
+  "title": "Actual exam question for Salesforce's PDT-101 exam",
+  "file": "PDT-101.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's PDX-101 exam",
+  "file": "PDX-101.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-101 exam",
+  "file": "Plat-101.csv",
+  "count": 57
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Admn-201 exam",
+  "file": "Plat-Admn-201.csv",
+  "count": 36
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Admn-202 exam",
+  "file": "Plat-Admn-202.csv",
+  "count": 9
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Admn-301 exam",
+  "file": "Plat-Admn-301.csv",
+  "count": 22
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Arch-202 exam",
+  "file": "Plat-Arch-202.csv",
+  "count": 6
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Arch-203 exam",
+  "file": "Plat-Arch-203.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Arch-204 exam",
+  "file": "Plat-Arch-204.csv",
+  "count": 17
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Arch-205 exam",
+  "file": "Plat-Arch-205.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Con-201 exam",
+  "file": "Plat-Con-201.csv",
+  "count": 1
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Dev-201 exam",
+  "file": "Plat-Dev-201.csv",
+  "count": 28
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Dev-210 exam",
+  "file": "Plat-Dev-210.csv",
+  "count": 3
+ },
+ {
+  "title": "Actual exam question for Salesforce's Plat-Dev-301 exam",
+  "file": "Plat-Dev-301.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's Platform-App-Builder exam",
+  "file": "Platform-App-Builder.csv",
+  "count": 264
+ },
+ {
+  "title": "Actual exam question for Salesforce's Process-Automation exam",
+  "file": "Process-Automation.csv",
+  "count": 109
+ },
+ {
+  "title": "Actual exam question for Salesforce's Public-Sector-Solutions exam",
+  "file": "Public-Sector-Solutions.csv",
+  "count": 85
+ },
+ {
+  "title": "Actual exam question for Salesforce's Rev-Con-201 exam",
+  "file": "Rev-Con-201.csv",
+  "count": 92
+ },
+ {
+  "title": "Actual exam question for Salesforce's Revenue-Cloud-Consultant-Accredited-Professional exam",
+  "file": "Revenue-Cloud-Consultant-Accredited-Professional.csv",
+  "count": 69
+ },
+ {
+  "title": "Actual exam question for Salesforce's Revenue-Cloud-Consultant exam",
+  "file": "Revenue-Cloud-Consultant.csv",
+  "count": 51
+ },
+ {
+  "title": "Actual exam question for Salesforce's Sales-101 exam",
+  "file": "Sales-101.csv",
+  "count": 13
+ },
+ {
+  "title": "Actual exam question for Salesforce's Sales-Admn-202 exam",
+  "file": "Sales-Admn-202.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's Sales-Cloud-Consultant exam",
+  "file": "Sales-Cloud-Consultant.csv",
+  "count": 198
+ },
+ {
+  "title": "Actual exam question for Salesforce's Sales-Con-201 exam",
+  "file": "Sales-Con-201.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-AI-Associate exam",
+  "file": "Salesforce-AI-Associate.csv",
+  "count": 104
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-AI-Specialist-JPN exam",
+  "file": "Salesforce-AI-Specialist-JPN.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-AI-Specialist exam",
+  "file": "Salesforce-AI-Specialist.csv",
+  "count": 155
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Associate exam",
+  "file": "Salesforce-Associate.csv",
+  "count": 112
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Certified-Administrator exam",
+  "file": "Salesforce-Certified-Administrator.csv",
+  "count": 216
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Communications-Cloud exam",
+  "file": "Salesforce-Communications-Cloud.csv",
+  "count": 74
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Contact-Center exam",
+  "file": "Salesforce-Contact-Center.csv",
+  "count": 54
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Data-Cloud exam",
+  "file": "Salesforce-Data-Cloud.csv",
+  "count": 93
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Hyperautomation-Specialist exam",
+  "file": "Salesforce-Hyperautomation-Specialist.csv",
+  "count": 40
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Loyalty-Management exam",
+  "file": "Salesforce-Loyalty-Management.csv",
+  "count": 100
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Maps-Professional exam",
+  "file": "Salesforce-Maps-Professional.csv",
+  "count": 9
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Marketing-Associate exam",
+  "file": "Salesforce-Marketing-Associate.csv",
+  "count": 121
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Media-Cloud exam",
+  "file": "Salesforce-Media-Cloud.csv",
+  "count": 4
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Mobile exam",
+  "file": "Salesforce-Mobile.csv",
+  "count": 8
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-MuleSoft-Associate exam",
+  "file": "Salesforce-MuleSoft-Associate.csv",
+  "count": 7
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-MuleSoft-Developer-I exam",
+  "file": "Salesforce-MuleSoft-Developer-I.csv",
+  "count": 47
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-MuleSoft-Developer-II exam",
+  "file": "Salesforce-MuleSoft-Developer-II.csv",
+  "count": 51
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Net-Zero-Cloud exam",
+  "file": "Salesforce-Net-Zero-Cloud.csv",
+  "count": 32
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Sales-Representative exam",
+  "file": "Salesforce-Sales-Representative.csv",
+  "count": 84
+ },
+ {
+  "title": "Actual exam question for Salesforce's Salesforce-Slack-Administrator exam",
+  "file": "Salesforce-Slack-Administrator.csv",
+  "count": 27
+ },
+ {
+  "title": "Actual exam question for Salesforce's Security-and-Privacy-Accredited-Professional exam",
+  "file": "Security-and-Privacy-Accredited-Professional.csv",
+  "count": 12
+ },
+ {
+  "title": "Actual exam question for Salesforce's Service-Cloud-Consultant exam",
+  "file": "Service-Cloud-Consultant.csv",
+  "count": 229
+ },
+ {
+  "title": "Actual exam question for Salesforce's Service-Con-201 exam",
+  "file": "Service-Con-201.csv",
+  "count": 10
+ },
+ {
+  "title": "Actual exam question for Salesforce's Sharing-and-Visibility-Architect exam",
+  "file": "Sharing-and-Visibility-Architect.csv",
+  "count": 151
+ },
+ {
+  "title": "Actual exam question for Salesforce's Sharing-and-Visibility-Designer exam",
+  "file": "Sharing-and-Visibility-Designer.csv",
+  "count": 79
+ },
+ {
+  "title": "Actual exam question for Salesforce's Slack-Admn-201 exam",
+  "file": "Slack-Admn-201.csv",
+  "count": 4
+ },
+ {
+  "title": "Actual exam question for Salesforce's Slack-Con-201 exam",
+  "file": "Slack-Con-201.csv",
+  "count": 213
+ },
+ {
+  "title": "Actual exam question for Salesforce's Slack-Consultant exam",
+  "file": "Slack-Consultant.csv",
+  "count": 60
+ },
+ {
+  "title": "Actual exam question for Salesforce's Strategy-Designer exam",
+  "file": "Strategy-Designer.csv",
+  "count": 20
+ },
+ {
+  "title": "Actual exam question for Salesforce's Tableau-CRM-Einstein-Discovery-Consultant exam",
+  "file": "Tableau-CRM-Einstein-Discovery-Consultant.csv",
+  "count": 20
+ },
+ {
+  "title": "Actual exam question for Salesforce's TVB-101 exam",
+  "file": "TVB-101.csv",
+  "count": 12
+ },
+ {
+  "title": "Actual exam question for Salesforce's TVB-201 exam",
+  "file": "TVB-201.csv",
+  "count": 2
+ },
+ {
+  "title": "Actual exam question for Salesforce's TVB-403 exam",
+  "file": "TVB-403.csv",
+  "count": 8
+ },
+ {
+  "title": "Actual exam question for Salesforce's TVB-450 exam",
+  "file": "TVB-450.csv",
+  "count": 47
+ },
+ {
+  "title": "Actual exam question for Salesforce's User-Experience-Designer exam",
+  "file": "User-Experience-Designer.csv",
+  "count": 94
+ }
+]

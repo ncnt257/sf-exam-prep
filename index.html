@@ -983,7 +983,7 @@
             <div class="loading-dots">
               <span></span><span></span><span></span>
             </div>
-            <span class="loading-subtext">Fetching questions.csv</span>
+            <span class="loading-subtext">Fetching exam list</span>
           </div>
         </div>
 
@@ -1189,8 +1189,8 @@ function parseCSVLineComma(line) {
 }
 
 // ─── State ────────────────────────────────────────────────────────────────────
-let allData = [];
-let exams = {};
+let examFiles = {};   // title -> CSV file name in data/
+let exams = {};       // title -> parsed rows, filled lazily by loadExam()
 let currentExam = null;
 let currentYear = null;
 let currentMode = 'practice';
@@ -1204,13 +1204,13 @@ let examTitles = [];
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 window.onload = () => {
-  fetch('questions.csv')
+  fetch('data/index.json')
     .then(res => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.text();
+      return res.json();
     })
-    .then(text => {
-      loadData(text);
+    .then(index => {
+      loadIndex(index);
       // Hide loading state, show content with a smooth fade-in
       document.getElementById('loading-state').style.display = 'none';
       const content = document.getElementById('content-ready');
@@ -1220,26 +1220,33 @@ window.onload = () => {
     .catch(err => {
       document.getElementById('loading-state').innerHTML =
         `<div style="width:100%;padding:14px 18px;background:#fce8e6;border-radius:8px;border-left:4px solid #ba0517;font-weight:700;color:#ba0517;">
-          ⚠️ Could not load questions.csv — make sure it is in the same folder and served over HTTP. (${err.message})
+          ⚠️ Could not load data/index.json — make sure the data folder is next to index.html and served over HTTP. (${err.message})
         </div>`;
     });
 };
 
-function loadData(text) {
+function loadIndex(index) {
+  examFiles = {};
+  index.forEach(e => { examFiles[e.title] = e.file; });
+  exams = {};
+  examTitles = Object.keys(examFiles);
+  renderOptions('exam', examTitles, '');
+}
+
+function parseRows(text) {
   const firstLine = text.split('\n')[0];
   const tabCount = (firstLine.match(/\t/g) || []).length;
   const commaCount = (firstLine.match(/,/g) || []).length;
-  allData = tabCount > commaCount ? parseCSV(text) : parseCSVComma(text);
+  return tabCount > commaCount ? parseCSV(text) : parseCSVComma(text);
+}
 
-  exams = {};
-  allData.forEach(row => {
-    const title = row['title'] || 'Unknown Exam';
-    if (!exams[title]) exams[title] = [];
-    exams[title].push(row);
-  });
-
-  examTitles = Object.keys(exams);
-  renderOptions('exam', examTitles, '');
+// Fetch one exam's CSV on first use and cache the parsed rows.
+async function loadExam(title) {
+  if (exams[title]) return exams[title];
+  const res = await fetch('data/' + encodeURIComponent(examFiles[title]));
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  exams[title] = parseRows((await res.text()).replace(/^﻿/, ''));
+  return exams[title];
 }
 
 // ─── Helper: extract year from created_at ─────────────────────────────────────
@@ -1355,7 +1362,7 @@ document.addEventListener('click', (e) => {
 });
 
 // ─── After Exam Selected ──────────────────────────────────────────────────────
-function onExamSelected() {
+async function onExamSelected() {
   currentYear = null;
 
   document.getElementById('step-year').classList.remove('hidden');
@@ -1363,7 +1370,18 @@ function onExamSelected() {
 
   setPillState(2);
 
-  const rows = exams[currentExam] || [];
+  const grid = document.getElementById('year-grid');
+  const exam = currentExam;
+  let rows;
+  try {
+    if (!exams[exam]) grid.innerHTML = '<div class="locked-field">Loading questions…</div>';
+    rows = await loadExam(exam);
+  } catch (err) {
+    if (exam === currentExam) grid.innerHTML = `<div class="locked-field">⚠️ Could not load data/${escapeHtml(examFiles[exam])} (${escapeHtml(err.message)})</div>`;
+    return;
+  }
+  if (exam !== currentExam) return; // user picked another exam while this one was loading
+
   const yearMap = {};
   rows.forEach(r => {
     const y = extractYear(r);
@@ -1371,7 +1389,6 @@ function onExamSelected() {
   });
 
   const years = Object.keys(yearMap).sort();
-  const grid = document.getElementById('year-grid');
 
   if (!years.length) {
     grid.innerHTML = '<div class="locked-field">⚠️ No <code>created_at</code> data found — skipping year filter.</div>';
