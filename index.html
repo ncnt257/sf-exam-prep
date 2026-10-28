@@ -140,13 +140,13 @@
   <!-- ══════════ EXAM SCREEN ══════════ -->
   <div id="exam-screen">
     <div class="exam-topbar">
-      <button class="back-btn" onclick="goBack()">← Back</button> 
+      <button class="back-btn" onclick="goBack()" aria-label="Back">←<span class="back-label"> Back</span></button>
       <div class="exam-topbar-left">
         <div class="exam-title-sm" id="topbar-title">—</div>
         <div class="mode-badge" id="mode-badge">Practice</div>
       </div>
-      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-        <button class="share-btn" onclick="openShare()" title="Continue this attempt on another device">📱 Continue on phone</button>
+      <div class="exam-topbar-right">
+        <button class="share-btn" onclick="openShare()" title="Continue this attempt on another device" aria-label="Continue on phone">📱<span class="share-label"> Continue on phone</span></button>
         <div class="progress-row">
           <span id="progress-text">0 / 0</span>
           <div class="progress-bar-wrap">
