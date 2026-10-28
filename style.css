@@ -551,7 +551,9 @@ body {
 .crumb-label { color: var(--sf-gray-500); font-size: 0.78rem; text-transform: uppercase; letter-spacing: .05em; }
 
 /* ─── Exam topbar ─── */
-#exam-screen { display: none; animation: fadeUp .35s ease; }
+/* No entry animation here or on .question-card: an animated transform on this very tall
+   screen (or on 100+ cards) forces huge GPU layers and iOS Safari kills the tab. */
+#exam-screen { display: none; }
 .exam-topbar {
   background: white;
   box-shadow: var(--shadow);
@@ -607,7 +609,9 @@ body {
   margin-bottom: 18px;
   border-left: 4px solid var(--sf-gray-200);
   transition: border-color var(--transition), box-shadow var(--transition);
-  animation: fadeUp .3s ease;
+  /* Skip layout/paint for off-screen cards — keeps long exams light on phones. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px;
 }
 .question-card.answered { border-left-color: var(--sf-blue); }
 .question-card.correct { border-left-color: var(--sf-green); }
