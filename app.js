@@ -492,6 +492,21 @@ async function resumeProgress(saved = loadProgress()) {
   }
   currentSeed = saved.seed ?? null;
   beginExam(saved.order || buildOrder(saved.total, currentSeed), saved.answers || {}, saved.seconds || 0);
+  scrollToNextUnanswered();
+}
+
+// Jump to the first question still without an answer, clear of the sticky header + topbar.
+function scrollToNextUnanswered() {
+  const idx = currentQuestions.findIndex((_, i) => !(userAnswers[i] && userAnswers[i].length));
+  if (idx <= 0) return; // nothing answered yet, or everything is answered
+  const card = document.getElementById(`qcard-${idx}`);
+  if (!card) return;
+  const header = document.querySelector('.header');
+  const topbar = document.querySelector('.exam-topbar');
+  const offset = (header ? header.offsetHeight : 0) + (topbar ? topbar.offsetHeight : 0) + 12;
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: card.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+  });
 }
 
 function discardProgress() {
