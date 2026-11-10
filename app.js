@@ -720,6 +720,9 @@ function toggleAnswer(idx) {
 // ─── Selection ────────────────────────────────────────────────────────────────
 function selectOption(qIdx, label, qtype) {
   if (examSubmitted) return;
+  // Ignore the click if the user was dragging to select/copy text
+  const sel = window.getSelection();
+  if (sel && !sel.isCollapsed && sel.toString().trim()) return;
   if (!userAnswers[qIdx]) userAnswers[qIdx] = [];
 
   if (qtype === 'single') {

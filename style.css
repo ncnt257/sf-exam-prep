@@ -670,7 +670,6 @@ body {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition);
-  user-select: none;
   background: var(--sf-gray-100);
 }
 .option-item:hover:not(.disabled) {
